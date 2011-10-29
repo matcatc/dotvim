@@ -8,6 +8,9 @@ call pathogen#helptags()
 
 set nocompatible
 
+
+set showcmd         " shows number of lines highlighted in visual mode (+ other stuff prob)
+
 " auto indenting
 "  we do not use smartindent or autoindent (with python) because it causes the
 "  comments to immediately go to the beginning of the line, which is REALLY
@@ -17,14 +20,12 @@ set nocompatible
 
 " python PEP8 standards
 set expandtab
-"set textwidth=79           " ignoring b/c its REALLY anoying
-set tabstop=8		    " TODO: Should this be 4?
+"set textwidth=79           " ignoring b/c its REALLY annoying
+set tabstop=4		    " TODO: Should this be 4?
 set softtabstop=4
 set shiftwidth=4
-:syntax on
 
-" folding (for python)
-set foldmethod=indent
+:syntax on
 
 " for omnicomplete
 filetype plugin on
@@ -38,23 +39,19 @@ set tags=tags
 set tags+=$HOME/.vim/tags/python.ctags
 
 " for MiniBufExplorer
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-
-let g:miniBufExplForceSyntaxEnable = 1      " force syntax highlighting (for bug)
+"  Uninstalled, keep until we're sure we don't want it anymore
+"let g:miniBufExplMapWindowNavVim = 1
+"let g:miniBufExplMapWindowNavArrows = 1
+"let g:miniBufExplMapCTabSwitchBufs = 1
+"let g:miniBufExplModSelTarget = 1
+"
+"let g:miniBufExplForceSyntaxEnable = 1      " force syntax highlighting (for bug)
 
 
 
 " for tasklist
 " <Leader>t ('\t') is already set
 let g:tlTokenList = ['TODO', 'FIXME', 'XXX', 'NEXT', 'EVENTUALLY']
-
-
-" for pylint
-"autocmd FileType python compiler pylint
-
 
 " for dictionary completion
 set dictionary+=/usr/share/dict/words
@@ -71,13 +68,19 @@ set spelllang=en_us
 if has("gui_running")
     colorscheme twilight
 else
-    set background=light
+    " TODO: terminal color issues
+    set background=dark
     colorscheme default
 endif
 
+"" menu and toolbars
+"
 " tabline
 " so that we don't have resizing issues with the tabline appearing in the gui
 "  causing the command line to disappear
 if has("gui_running")
+    set guioptions-=m       " hide menubar
+    set guioptions-=T       " hide toolbar
     set showtabline=2
 endif
+

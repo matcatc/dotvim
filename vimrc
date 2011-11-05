@@ -11,12 +11,8 @@ set nocompatible
 
 set showcmd         " shows number of lines highlighted in visual mode (+ other stuff prob)
 
-" auto indenting
-"  we do not use smartindent or autoindent (with python) because it causes the
-"  comments to immediately go to the beginning of the line, which is REALLY
-"  annoying
-"set smartindent
-"set autoindent
+set tabpagemax=50   " max # pages opened w/ `vim -p`
+
 
 " python PEP8 standards
 set expandtab

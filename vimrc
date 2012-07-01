@@ -2,9 +2,15 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+
+
 " Do this to load pathogen correctly
+"  TODO haven't used this in ages, remove?
 "filetype off
 "filetype plugin indent on
+
+
+
 
 set nocompatible
 
@@ -13,42 +19,52 @@ set showcmd         " shows number of lines highlighted in visual mode (+ other 
 
 set tabpagemax=50   " max # pages opened w/ `vim -p`
 
+:syntax on
 
-" python PEP8 standards
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       Tabs and indentation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" default settings. Should probably be overridden for some languages, projects
 set expandtab
-"set textwidth=79           " ignoring b/c its REALLY annoying
-set tabstop=4		    " TODO: Should this be 4?
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-:syntax on
 
-" for omnicomplete
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       omnicomplete
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on
 set ofu=syntaxcomplete#Complete
 
-" ctags tags file
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       ctags
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "  Is this really where we want it? What about in projects that have multiple
 "  levels? Or perhaps this is a default and we can set the file manually
 "  otherwise
 set tags=tags
 set tags+=$HOME/.vim/tags/python.ctags
 
-" for MiniBufExplorer
-"  Uninstalled, keep until we're sure we don't want it anymore
-"let g:miniBufExplMapWindowNavVim = 1
-"let g:miniBufExplMapWindowNavArrows = 1
-"let g:miniBufExplMapCTabSwitchBufs = 1
-"let g:miniBufExplModSelTarget = 1
-"
-"let g:miniBufExplForceSyntaxEnable = 1      " force syntax highlighting (for bug)
 
 
-
-" for tasklist
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       tasklist
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " <Leader>t ('\t') is already set
 let g:tlTokenList = ['TODO', 'FIXME', 'XXX', 'NEXT', 'EVENTUALLY']
 
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       Dictionary / spelling
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " for dictionary completion
 set dictionary+=/usr/share/dict/words
 
@@ -59,17 +75,26 @@ set dictionary+=/usr/share/dict/words
 set spelllang=en_us
 
 
-" colorscheme
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       colorscheme
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " There are a bunch of possible good options, I just choose one
 if has("gui_running")
     colorscheme twilight
 else
-    " TODO: terminal color issues
+    " TODO terminal color issues
     set background=dark
     colorscheme default
 endif
 
-"" menu and toolbars
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       menu and toolbars
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " tabline
 " so that we don't have resizing issues with the tabline appearing in the gui
@@ -79,4 +104,6 @@ if has("gui_running")
     set guioptions-=T       " hide toolbar
     set showtabline=2
 endif
+
+
 

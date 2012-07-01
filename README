@@ -1,0 +1,13 @@
+README
+======
+:author: Matthew Todd
+:date: Jul 1, 2012
+
+
+
+Install
+-------
+
+To install:
+1) drop this repo into a ~/.vim.
+2) create softlinks from ~/.vimrc to ~/.vim/vimrc and ~/.gvimrc to ~/.vim/gvimrc

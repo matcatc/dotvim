@@ -13,8 +13,7 @@ set shiftwidth=4
 "  comments to immediately go to the beginning of the line, which is REALLY
 "  annoying
 " TODO look into getting auto indentation to work
-set nosmartindent
-set noautoindent
+set autoindent
 
 
 " for pylint

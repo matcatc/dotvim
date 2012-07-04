@@ -84,9 +84,10 @@ set spelllang=en_us
 if has("gui_running")
     colorscheme twilight
 else
-    " TODO terminal color issues
-    set background=dark
+    " terminal limited to 256 colors, which thereby severely limits the
+    " colorschemes
     colorscheme default
+    set background=dark
 endif
 
 

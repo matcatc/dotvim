@@ -11,3 +11,19 @@ Install
 To install:
 1) drop this repo into a ~/.vim.
 2) create softlinks from ~/.vimrc to ~/.vim/vimrc and ~/.gvimrc to ~/.vim/gvimrc
+
+
+License
+-------
+
+Not sure what licenses would be applicable to configuration files, so I'm
+simply releasing my configurations as "Free". Ie: public domain.
+
+Also worth noting that I've gotten inspiration from other documentation soruces
+(vim wiki for example), which didn't explicitly state licensing. So I think
+public domain is the most reasonable on technical grounds.
+
+This applies only to the configurations, and not the actual plugins. 
+
+Contact me if you really need a more specific answer.
+

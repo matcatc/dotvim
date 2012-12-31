@@ -122,3 +122,17 @@ let g:syntastic_python_checker_args = ''
 let g:syntastic_python_checker_args .= ' --max-line-length 120'       " I usually have 120+ character wide windows, so I can afford to have longer lines.
 let g:syntastic_python_checker_args .= ' --bad-functions=apply,input' " I don't think map and filter are bad
 
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       custom macros
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Macro for appending 'TODO: delete when done debugging' to the end of the
+" line
+"  Note: could have it add the comment character, if we can determine the
+"  proper comment character for a filetype. This can be done via setting it
+"  in language.vim files or via the nerdcommenter plugin. But this seems to be
+"  overkill at the moment, so leaving it for future growth.
+:map <leader>dwdd :normal A TODO: Delete When Done Debugging<ESC>
+

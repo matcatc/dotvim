@@ -113,3 +113,12 @@ endif
 
 
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       Syntastic configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO: Put this in language specific files?
+let g:syntastic_python_checker_args = ''
+let g:syntastic_python_checker_args .= ' --max-line-length 120'       " I usually have 120+ character wide windows, so I can afford to have longer lines.
+let g:syntastic_python_checker_args .= ' --bad-functions=apply,input' " I don't think map and filter are bad
+

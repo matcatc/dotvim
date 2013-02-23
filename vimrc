@@ -130,9 +130,22 @@ let g:syntastic_python_checker_args .= ' --bad-functions=apply,input' " I don't 
 
 " Macro for appending 'TODO: delete when done debugging' to the end of the
 " line
-"  Note: could have it add the comment character, if we can determine the
-"  proper comment character for a filetype. This can be done via setting it
-"  in language.vim files or via the nerdcommenter plugin. But this seems to be
-"  overkill at the moment, so leaving it for future growth.
-:map <leader>dwdd :normal A TODO: Delete When Done Debugging<ESC>
+"
+" Got idea for implementation regarding the comment characters from:
+" http://stackoverflow.com/a/3873207/191008
+" 
+" Set comment characters for common languages
+autocmd FileType python,sh,bash,zsh,ruby,perl,muttrc let b:StartComment="#" | let b:EndComment=""
+autocmd FileType html let b:StartComment="<!--" | let b:EndComment="-->"
+autocmd FileType php,cpp,javascript let b:StartComment="//" | let b:EndComment=""
+autocmd FileType c,css let b:StartComment="/*" | let b:EndComment="*/"
+autocmd FileType vim let b:StartComment="\"" | let b:EndComment=""
+autocmd FileType ini let b:StartComment=";" | let b:EndComment=""
+
+function! DWDD()
+    execute ":normal A".b:StartComment." TODO: Delete When Done Debugging".b:EndComment
+endfunction
+
+:map <leader>dwdd :call DWDD()<CR>
+
 

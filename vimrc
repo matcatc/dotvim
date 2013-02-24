@@ -135,6 +135,7 @@ let g:syntastic_python_checker_args .= ' --bad-functions=apply,input' " I don't 
 " http://stackoverflow.com/a/3873207/191008
 " 
 " Set comment characters for common languages
+let b:EndComment=""
 autocmd FileType python,sh,bash,zsh,ruby,perl,muttrc let b:StartComment="#" | let b:EndComment=""
 autocmd FileType html let b:StartComment="<!--" | let b:EndComment="-->"
 autocmd FileType php,cpp,javascript let b:StartComment="//" | let b:EndComment=""
@@ -143,7 +144,11 @@ autocmd FileType vim let b:StartComment="\"" | let b:EndComment=""
 autocmd FileType ini let b:StartComment=";" | let b:EndComment=""
 
 function! DWDD()
-    execute ":normal A".b:StartComment." TODO: Delete When Done Debugging".b:EndComment
+    if !exists("b:StartComment")
+        echo "ERROR: b:StartComment not defined for the current buffer"
+    else
+        execute ":normal A".b:StartComment." TODO: Delete When Done Debugging".b:EndComment
+    endif
 endfunction
 
 :map <leader>dwdd :call DWDD()<CR>

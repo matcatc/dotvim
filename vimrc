@@ -124,6 +124,19 @@ let g:syntastic_python_checker_args .= ' --bad-functions=apply,input' " I don't 
 
 
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       haskellmode configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Must be done before the haskellmode files are read, so can't go in
+" after/haskell.vim
+let g:haddock_browser="firefox"
+au Bufenter *.hs compiler ghc
+
+
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "       custom macros
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

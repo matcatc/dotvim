@@ -133,6 +133,9 @@ let g:syntastic_python_checker_args .= ' --bad-functions=apply,input' " I don't 
 let g:haddock_browser="firefox"
 au Bufenter *.hs compiler ghc
 
+" ghc.vim by default sets cmdheight=3. I don't like it wasting that much space, so I
+" went inside and commented that line out. If we want it to be different, we
+" can put it in after/ftplugin/haskell.vim
 
 
 

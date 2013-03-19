@@ -64,7 +64,11 @@ endif
 let g:haskell_functions = "ghc"
 
 " avoid hit-enter prompts
-set cmdheight=3
+" Mar 18, 2013
+" MT: I commented this out b/c I don't want it messing up ALL my buffers. If
+" we decide we want it, we can put it in after/ftplugin/haskell.vim, where it
+" belongs, IMO.
+"set cmdheight=3
 
 " edit static GHC options
 " TODO: add completion for options/packages?

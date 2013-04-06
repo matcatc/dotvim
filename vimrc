@@ -152,7 +152,7 @@ au Bufenter *.hs compiler ghc
 " 
 " Set comment characters for common languages
 let b:EndComment=""
-autocmd FileType python,sh,bash,zsh,ruby,perl,muttrc let b:StartComment="#" | let b:EndComment=""
+autocmd FileType python,sh,bash,zsh,ruby,perl,muttrc,conf let b:StartComment="#" | let b:EndComment=""
 autocmd FileType html let b:StartComment="<!--" | let b:EndComment="-->"
 autocmd FileType php,cpp,javascript let b:StartComment="//" | let b:EndComment=""
 autocmd FileType c,css let b:StartComment="/*" | let b:EndComment="*/"

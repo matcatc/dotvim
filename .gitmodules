@@ -30,3 +30,6 @@
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
         ignore = dirty
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+	url = git://github.com/davidhalter/jedi-vim.git

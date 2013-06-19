@@ -158,6 +158,7 @@ autocmd FileType php,cpp,javascript let b:StartComment="//" | let b:EndComment="
 autocmd FileType c,css let b:StartComment="/*" | let b:EndComment="*/"
 autocmd FileType vim let b:StartComment="\"" | let b:EndComment=""
 autocmd FileType ini let b:StartComment=";" | let b:EndComment=""
+autocmd FileType sql let b:StartComment="--" | let b:EndComment=""
 
 function! DWDD()
     if !exists("b:StartComment")

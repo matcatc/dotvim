@@ -38,3 +38,7 @@
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
     ignore = dirty
+[submodule "bundle/easygrep"]
+	path = bundle/easygrep
+	url = git://github.com/vim-scripts/EasyGrep.git
+    ignore = dirty

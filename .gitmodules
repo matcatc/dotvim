@@ -2,10 +2,6 @@
 	path = bundle/tasklist
 	url = git://github.com/vim-scripts/TaskList.vim.git
         ignore = dirty
-[submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = git://github.com/mexpolk/vim-taglist.git
-        ignore = dirty
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git

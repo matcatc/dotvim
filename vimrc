@@ -80,12 +80,12 @@ nnoremap <S-C-0> g0
 "       Tabs and indentation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " default settings. Should probably be overridden for some languages, projects
-set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-
+"Tabs are preferred at work, so don't expand to spaces
+set noet
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

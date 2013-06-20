@@ -1,5 +1,5 @@
 " python PEP8 standards
-set expandtab
+set noexpandtab         " Tabs preferred at work
 "set textwidth=79           " ignoring b/c its REALLY annoying
 set tabstop=4		    " TODO: Should this be 4?
 set softtabstop=4

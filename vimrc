@@ -176,7 +176,7 @@ else
     " terminal limited to 256 colors, which thereby severely limits the
     " colorschemes
     colorscheme default
-    set background=dark
+    set background=light
 endif
 
 

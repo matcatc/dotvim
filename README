@@ -27,3 +27,37 @@ This applies only to the configurations, and not the actual plugins.
 
 Contact me if you really need a more specific answer.
 
+
+
+Branches
+--------
+
+Given that I use vim both at work and at home, and that my needs in the two
+environments are slightly different, there are two branches publicly available
+(in addition to master):
+
+* public_home
+* public_work
+
+master is the common "trunk" branch which all all other branches are based off
+of.
+
+public_home is the one I use at home. This will likely be the closest to
+master.
+
+public_work is the one I use at work. Most changes are made so that I can
+get my vim configuration to work with my development environment.  Mostly
+things like making this work with CentOS 5.9 and it's outdated libraries,
+python version, syntax files, etc.
+
+I haven't yet decided how I'll manage the branches, whether it be merging
+feature branches into only the branches that need it or doing rebases. As such,
+assume that the public_* branches are volatile and take care in basing
+development work on them (because they may be rebased). I don't currently have
+enough experience with this kind of setup (multiple long-term public branches)
+to really know what approach to take, so this will be a learning experience for
+me.
+
+Of course, this idea can be extended to more branches for more environments.
+
+

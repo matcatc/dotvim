@@ -167,11 +167,16 @@ set spelllang=en_us
 " TODO: finalize on the colorscheme we want to use. Perhaps tweak the
 " colorscheme as well.
 if has("gui_running")
+    " For home
     set background=dark " Some colorschemes will set this, so we set it before
                         " calling them so they can override this option if
                         " they so choose.
 "    colorscheme twilight-custom
     colorscheme wombat
+
+    " TODO: For work
+    set background=light
+    colorscheme default
 else
     " terminal limited to 256 colors, which thereby severely limits the
     " colorschemes

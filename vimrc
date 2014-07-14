@@ -21,6 +21,8 @@ set tabpagemax=50   " max # pages opened w/ `vim -p`
 
 :syntax on
 
+" Set the list characters for `set list` to show whitespace
+set listchars=tab:>-,trail:-
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -21,6 +21,22 @@ set tabpagemax=50   " max # pages opened w/ `vim -p`
 
 :syntax on
 
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       Line number stuff
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"set number             " Show line numbers
+"set relativenumber     " Show line numbers as relative to current position.
+                        "  Useful for more complicated vim commands (e.g.:
+                        "  delete several lines).
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       Showing invisible characters
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set the list characters for `set list` to show whitespace
 "  I normally don't need the eol characters, since I use the trailing spaces
 "  to identify that there's extra "trailing" spaces at the end of a line.

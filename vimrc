@@ -22,7 +22,46 @@ set tabpagemax=50   " max # pages opened w/ `vim -p`
 :syntax on
 
 " Set the list characters for `set list` to show whitespace
-set listchars=tab:>-,trail:-
+"  I normally don't need the eol characters, since I use the trailing spaces
+"  to identify that there's extra "trailing" spaces at the end of a line.
+"set listchars=tab:▶\ ,trail:◦,eol:¬
+set listchars=tab:▶\ ,trail:◦
+" Toggling command for list
+nnoremap <leader>l :set list!<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       Line wrapping
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Soft linewrapping
+set linebreak       " Don't wrap lines in the middle of a word. Doesn't work
+                    "  with :set list enabled.
+set showbreak=…     " Start continued lines with this character, to make it
+                    "  clear it's a continuation of the previous line.
+" The g<movement keys> work well with soft-wrapped text, to move around in
+"  visual lines. These bindings make it easier to work with, although it'd be
+"  nicer if we could do Super key (e.g.: windows key) - movement. You can hold
+"  down Shift-Ctrl and then move around visually.
+vnoremap <S-C-j> gj
+vnoremap <S-C-k> gk
+vnoremap <S-C-h> h
+vnoremap <S-C-l> l
+vnoremap <S-C-4> g$
+vnoremap <S-C-6> g^
+vnoremap <S-C-0> g0
+nnoremap <S-C-j> gj
+nnoremap <S-C-k> gk
+nnoremap <S-C-h> h
+nnoremap <S-C-l> l
+nnoremap <S-C-4> g$
+nnoremap <S-C-6> g^
+nnoremap <S-C-0> g0
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Hard linewrapping
+"  Use gwap, gwip, gqap, gqip
+" Optionally, update formatoptions to affect the formatting algorithm and
+" autoformatting.
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -97,7 +136,7 @@ set spelllang=en_us
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " There are a bunch of possible good options, I just choose one
 if has("gui_running")
-    colorscheme twilight
+    colorscheme twilight-custom
 else
     " terminal limited to 256 colors, which thereby severely limits the
     " colorschemes
@@ -181,3 +220,36 @@ endfunction
 :map <leader>dwdd :call DWDD()<CR>
 
 
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       Prevent F1 from opening help
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Since it's too easy to hit F1 by accident when trying to hit Esc.
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+
+
+" TODO: test these out:
+"nnoremap j gj
+"nnoremap k gk
+
+
+" TODO: test these out:
+"nnoremap <leader>v V`]
+
+
+" TODO: test these out (highlighted search, and clearing the last highlighted search):
+"set hlsearch
+"nnoremap <silent> ,/ :nohlsearch<CR>
+"
+"
+"
+"TODO: test this out
+" Save a file using sudo if alread opened
+"cnoremap w!! w !sudo tee % >/dev/null
+
+
+"

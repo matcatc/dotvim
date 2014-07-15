@@ -96,7 +96,7 @@ set shiftwidth=4
 "       omnicomplete
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on
-set ofu=syntaxcomplete#Complete
+set omnifunc=syntaxcomplete#Complete
 
 " Third party jedi autocompleteion mechanism
 "let g:jedi#autocompletion_command = "<S-Space>"     " alternate keymap (Ctrl-x Ctrl-o still seems to work though)
@@ -104,14 +104,30 @@ let g:jedi#show_function_definition = "0"             " no popup window. Goes aw
 let g:jedi#popup_on_dot = 0                         " no popup on dot
 
 
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "       ctags
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"  Is this really where we want it? What about in projects that have multiple
-"  levels? Or perhaps this is a default and we can set the file manually
-"  otherwise
-set tags=tags
-set tags+=$HOME/.vim/tags/python.ctags
+" See :help tags for more Info.
+" :tag <tag> to jump to <tag>
+" :tag /<tag> to search for <tag>
+" Ctrl-] to jump to the definition of the selected tag
+" Ctrl-T to jump back
+" Ctrl-W Ctrl-] to open the definition of the selected tag in a new horizontal
+" buffer
+"
+set tags=./tags;$HOME            " Search current directory up to $HOME for the tags file (recurse up). From: http://stackoverflow.com/a/741486
+set tags+=$HOME/.vim/tags/python.ctags      " Not sure why this is here...
+
+" Build tags from vim with Ctrl-F12
+" TODO: found several places online. Try it out sometime and modify as
+"  necessary.
+map <C-F12> :!ctags -R --exclude=.svn --exclude=.git --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+
+" TODO: figure out a way to do tags for projects?
 
 
 

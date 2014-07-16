@@ -54,3 +54,7 @@
 	path = bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
 	ignore = dirty
+[submodule "bundle/csv"]
+	path = bundle/csv
+	url = https://github.com/chrisbra/csv.vim.git
+	ignore = dirty

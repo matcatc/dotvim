@@ -284,4 +284,11 @@ vnoremap <F1> <ESC>
 "cnoremap w!! w !sudo tee % >/dev/null
 
 
-"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       Ack
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Install Ack: (ack-grep in Debian systems) or http://beyondgrep.com/install/
+
+
+
+

@@ -100,7 +100,6 @@ set omnifunc=syntaxcomplete#Complete
 
 " Third party jedi autocompleteion mechanism
 "let g:jedi#autocompletion_command = "<S-Space>"     " alternate keymap (Ctrl-x Ctrl-o still seems to work though)
-let g:jedi#show_function_definition = "0"             " no popup window. Goes away on its own, but I usually don't want it anyways. Option doesn't seem to have any effect.
 let g:jedi#popup_on_dot = 0                         " no popup on dot
 
 

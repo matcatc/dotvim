@@ -1,13 +1,13 @@
 " Do this first (or before filetype on stuff)
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+execute pathogen#infect()
+" TODO: delete the following, as it's been deprecated
+"call pathogen#runtime_append_all_bundles()
+"call pathogen#helptags()
 
 
 
-" Do this to load pathogen correctly
-"  TODO haven't used this in ages, remove?
-"filetype off
-"filetype plugin indent on
+" Do this AFTER loading pathogen
+filetype plugin indent on
 
 
 

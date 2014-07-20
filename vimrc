@@ -252,6 +252,18 @@ endfunction
 
 
 
+" Go to a specific line number, but specify the line number in hex (0x0123)
+"  Will _probably_ accept other number formats as well
+"
+" Called HexG for Hexadecimal number "G" (as in the normal mode command) for
+" "Go"
+function! HexG(hexLine)
+    let decLine = printf("%d", a:hexLine)
+    " Equivalent of :12345
+    execute decLine
+endfunction
+command -nargs=1 HexG call HexG(<q-args>)
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "       Prevent F1 from opening help

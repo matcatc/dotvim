@@ -129,18 +129,7 @@ map <C-F12> :!ctags -R --exclude=.svn --exclude=.git --c++-kinds=+p --fields=+ia
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "       tasklist
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" <Leader>t ('\t') is already set by the plugin, but the Command-T plugin will
-"   also try to map it, so we do it here.
-noremap <unique> <Leader>t <Plug>TaskList
 let g:tlTokenList = ['TODO', 'FIXME', 'XXX', 'NEXT', 'EVENTUALLY']
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"       Command-T
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" I'm keeping <Leader>t for tasklist, since I've been using it like that for a
-" while now (so muscle-memory might interfere if I used it for Command-T.)
-nnoremap <silent> <Leader>s :CommandT<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

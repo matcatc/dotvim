@@ -1,9 +1,5 @@
 " Do this first (or before filetype on stuff)
 execute pathogen#infect()
-" TODO: delete the following, as it's been deprecated
-"call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
-
 
 
 " Do this AFTER loading pathogen

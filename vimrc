@@ -250,6 +250,26 @@ endfunction
 command -nargs=1 HexG call HexG(<q-args>)
 
 
+
+" Sums the currently visually selected numbers
+" @warning: Will overwrite the default register (better than overwriting a named
+"  one and is easier to paste back...).
+function! SumSelection(sel)
+    " Use printf to ensure there's no newline characters, which make pasting
+    " the sum back into the buffer harder
+    let sum = system("awk '{total+=$1}END{printf \"%d\", total}'", a:sel)
+
+    echo sum
+
+    " set the default register in character mode to make it easy to paste back
+    " into the document
+    call setreg('"', sum, 'c')
+endfunction
+" su for sum
+:vmap <leader>su y:call SumSelection(@")<CR>
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "       Prevent F1 from opening help
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -54,3 +54,7 @@
 	path = bundle/csv
 	url = https://github.com/chrisbra/csv.vim.git
 	ignore = dirty
+[submodule "bundle/vim-asciidoc-folding"]
+	path = bundle/vim-asciidoc-folding
+	url = https://github.com/matcatc/vim-asciidoc-folding.git
+	ignore = dirty

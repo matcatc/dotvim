@@ -280,6 +280,11 @@ vnoremap <F1> <ESC>
 
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       Miscellaneous mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
 " TODO: test these out:
 "nnoremap j gj
 "nnoremap k gk
@@ -297,6 +302,13 @@ vnoremap <F1> <ESC>
 
 " Save a file using sudo if alread opened
 cnoremap w!! w !sudo tee % >/dev/null
+
+
+" Cd to the directory the current file resides in
+" Also prints out the directory afterwards, so we know what the new directory
+"  is.
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
+
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

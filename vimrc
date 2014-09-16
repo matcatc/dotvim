@@ -292,12 +292,11 @@ vnoremap <F1> <ESC>
 " TODO: test these out (highlighted search, and clearing the last highlighted search):
 "set hlsearch
 "nnoremap <silent> ,/ :nohlsearch<CR>
-"
-"
-"
-"TODO: test this out
+
+
+
 " Save a file using sudo if alread opened
-"cnoremap w!! w !sudo tee % >/dev/null
+cnoremap w!! w !sudo tee % >/dev/null
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

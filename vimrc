@@ -318,4 +318,13 @@ nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       Ctrl-P
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" To make Ctrl-P vim plugin just use Vim's working directory (pwd). Otherwise
+" it will always start searching from the current file's directory. I use this
+" as I typically will open vim in a project's root directory then open files
+" from there.
+let g:ctrlp_working_path_mode = '0'
+
 

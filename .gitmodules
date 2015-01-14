@@ -58,3 +58,6 @@
 	path = bundle/vim-asciidoc-folding
 	url = https://github.com/matcatc/vim-asciidoc-folding.git
 	ignore = dirty
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git

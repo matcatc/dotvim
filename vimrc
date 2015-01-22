@@ -92,12 +92,25 @@ set shiftwidth=4
 "       omnicomplete
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype plugin on
-set omnifunc=syntaxcomplete#Complete
 
-" Third party jedi autocompleteion mechanism
+" Not sure why we had this set before. Try without for now.
+"set omnifunc=syntaxcomplete#Complete
+
+" Third party jedi autocompletion mechanism
 "let g:jedi#autocompletion_command = "<S-Space>"     " alternate keymap (Ctrl-x Ctrl-o still seems to work though)
 let g:jedi#popup_on_dot = 0                         " no popup on dot
 
+
+" Third party OmniCppComplete autocompletion mechanism
+" Based on http://vim.wikia.com/wiki/C%2B%2B_code_completion
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let OmniCpp_MayCompleteDot = 0 " autocomplete after .
+let OmniCpp_MayCompleteArrow = 0 " autocomplete after ->
+let OmniCpp_MayCompleteScope = 0 " autocomplete after ::
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
 
 

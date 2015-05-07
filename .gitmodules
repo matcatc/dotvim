@@ -66,3 +66,15 @@
 	path = bundle/vim-unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
 	ignore = dirty
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+	ignore = dirty
+[submodule "bundle/CycleColor"]
+	path = bundle/CycleColor
+	url = https://github.com/vim-scripts/CycleColor.git
+	ignore = dirty
+[submodule "bundle/syntaxhaskell.vim"]
+	path = bundle/syntaxhaskell.vim
+	url = https://github.com/vim-scripts/syntaxhaskell.vim.git
+	ignore = dirty

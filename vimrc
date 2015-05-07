@@ -350,3 +350,20 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 "let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"       Syntax related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Show syntax highlighting groups for word under cursor
+" Useful for testing/debugging syntax files.
+" From: http://stackoverflow.com/questions/5820793/vim-get-content-of-syntax-element-under-cursor
+nmap <leader>z :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
+
+

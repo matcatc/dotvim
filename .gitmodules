@@ -78,3 +78,7 @@
 	path = bundle/syntaxhaskell.vim
 	url = https://github.com/vim-scripts/syntaxhaskell.vim.git
 	ignore = dirty
+[submodule "bundle/vim-HiLinkTrace"]
+	path = bundle/vim-HiLinkTrace
+	url = https://github.com/gerw/vim-HiLinkTrace.git
+	ignore = dirty

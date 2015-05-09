@@ -354,7 +354,11 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "       Syntax related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" See :help hilinks
+" HiLinkTrace: See :help hilinks
+"
+" hexHighlight: See bundle/hexHighlight/README for details. In summary:
+"   <Leader>F2 to highlight things of the form #00FF00.
+"   Warning: #0F0 doesn't work, regardless of what the README says.
 
 
 

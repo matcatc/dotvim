@@ -82,3 +82,7 @@
 	path = bundle/vim-HiLinkTrace
 	url = https://github.com/gerw/vim-HiLinkTrace.git
 	ignore = dirty
+[submodule "bundle/hexHighlight"]
+	path = bundle/hexHighlight
+	url = https://github.com/yurifury/hexHighlight.git
+	ignore = dirty

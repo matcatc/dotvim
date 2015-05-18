@@ -80,12 +80,44 @@ nnoremap <S-C-0> g0
 "       Tabs and indentation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " default settings. Should probably be overridden for some languages, projects
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+"set tabstop=4
+"set softtabstop=4
+"set shiftwidth=4
+"
+""Tabs are preferred at work, so don't expand to spaces
+"set noet
 
-"Tabs are preferred at work, so don't expand to spaces
-set noet
+" Since we need to work with files in both old and new format guidelines, we
+" have methods to switch between the two.
+function! OldWorkFormat()
+	set tabstop=4
+	set softtabstop=4
+	set shiftwidth=4
+	set noexpandtab
+	let g:workFormat="old"
+endfunction
+
+function! NewWorkFormat()
+	set tabstop=3
+	set softtabstop=3
+	set shiftwidth=3
+	set expandtab
+	let g:workFormat="new"
+endfunction
+
+function! ToggleFormat()
+	if g:workFormat == "old"
+		call NewWorkFormat()
+	else
+		call OldWorkFormat()
+	endif
+   echo "workformat = ".g:workFormat
+endfunction
+
+" Default to new work format
+:call NewWorkFormat()
+
+:map <leader>f :call ToggleFormat()<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

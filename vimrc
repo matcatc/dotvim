@@ -57,14 +57,14 @@ set showbreak=…     " Start continued lines with this character, to make it
 vnoremap <S-C-j> gj
 vnoremap <S-C-k> gk
 vnoremap <S-C-h> h
-vnoremap <S-C-l> l
+"vnoremap <S-C-l> l
 vnoremap <S-C-4> g$
 vnoremap <S-C-6> g^
 vnoremap <S-C-0> g0
 nnoremap <S-C-j> gj
 nnoremap <S-C-k> gk
 nnoremap <S-C-h> h
-nnoremap <S-C-l> l
+"nnoremap <S-C-l> l
 nnoremap <S-C-4> g$
 nnoremap <S-C-6> g^
 nnoremap <S-C-0> g0

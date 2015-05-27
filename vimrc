@@ -334,7 +334,10 @@ nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 "       Ack
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Install Ack: (ack-grep in Debian systems) or http://beyondgrep.com/install/
-
+"
+" Helpful mapping to search for the current word under the cursor
+" Uses filetype to try to limit searching to files of current type
+nnoremap <leader>ack :Ack --<C-R>=&filetype<CR> <C-R><C-W><CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

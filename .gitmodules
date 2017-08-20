@@ -86,3 +86,6 @@
 	path = bundle/hexHighlight
 	url = https://github.com/yurifury/hexHighlight.git
 	ignore = dirty
+[submodule "bundle/vim-toml"]
+	path = bundle/vim-toml
+	url = https://github.com/cespare/vim-toml.git

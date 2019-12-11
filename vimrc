@@ -170,15 +170,14 @@ if has("gui_running")
     set background=dark " Some colorschemes will set this, so we set it before
                         " calling them so they can override this option if
                         " they so choose.
-"    colorscheme twilight-custom
-    colorscheme wombat
+"    colorscheme wombat
+    colorscheme LightDefaultGrey
 else
     " terminal limited to 256 colors, which thereby severely limits the
     " colorschemes
     colorscheme default
     set background=dark
 endif
-
 
 
 
@@ -374,5 +373,13 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 "   :source $VIMRUNTIME/syntax/hitest.vim
 "
 
+" Helper function when debugging vim colorschemes
+" From: https://stackoverflow.com/questions/9464844/how-to-get-group-name-of-highlighting-under-cursor-in-vim
+" use with `:call SynGroup()` with the cursor over the syntax group of
+" interest.
+function! SynGroup()                                                            
+    let l:s = synID(line('.'), col('.'), 1)                                       
+    echo synIDattr(l:s, 'name') . ' -> ' . synIDattr(synIDtrans(l:s), 'name')
+endfun
 
 

@@ -1,5 +1,5 @@
 [submodule "bundle/tasklist"]
-	path = bundle/tasklist
+	path = pack/bundle/start/tasklist
 	url = https://github.com/vim-scripts/TaskList.vim.git
 	ignore = dirty
 [submodule "bundle/fugitive"]
@@ -11,7 +11,7 @@
 	url = https://github.com/fs111/pydoc.vim.git
 	ignore = dirty
 [submodule "bundle/tabular"]
-	path = bundle/tabular
+	path = pack/bundle/start/tabular
 	url = https://github.com/godlygeek/tabular.git
 	ignore = dirty
 [submodule "bundle/snipmate"]
@@ -19,74 +19,74 @@
 	url = https://github.com/msanders/snipmate.vim.git
 	ignore = dirty
 [submodule "bundle/surround"]
-	path = bundle/surround
+	path = pack/bundle/start/surround
 	url = https://github.com/tpope/vim-surround.git
 	ignore = dirty
 [submodule "bundle/jedi-vim"]
-	path = bundle/jedi-vim
+	path = pack/bundle/start/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
 	ignore = dirty
 [submodule "bundle/taglist"]
-	path = bundle/taglist
+	path = pack/bundle/start/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
 	ignore = dirty
 [submodule "bundle/syntastic"]
-	path = bundle/syntastic
+	path = pack/bundle/start/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 	ignore = dirty
 [submodule "bundle/vim-haskellFold"]
-	path = bundle/vim-haskellFold
+	path = pack/bundle/start/vim-haskellFold
 	url = https://github.com/Twinside/vim-haskellFold.git
 	ignore = dirty
 [submodule "bundle/ctrlp.vim"]
-	path = bundle/ctrlp.vim
+	path = pack/bundle/start/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
 	ignore = dirty
 [submodule "bundle/csv"]
-	path = bundle/csv
+	path = pack/bundle/start/csv
 	url = https://github.com/chrisbra/csv.vim.git
 	ignore = dirty
 [submodule "bundle/vim-asciidoc-folding"]
-	path = bundle/vim-asciidoc-folding
+	path = pack/bundle/start/vim-asciidoc-folding
 	url = https://github.com/matcatc/vim-asciidoc-folding.git
 	ignore = dirty
 [submodule "bundle/ultisnips"]
-	path = bundle/ultisnips
+	path = pack/bundle/start/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
 	ignore = dirty
 [submodule "bundle/OmniCppComplete"]
-	path = bundle/OmniCppComplete
+	path = pack/bundle/start/OmniCppComplete
 	url = https://github.com/vim-scripts/OmniCppComplete.git
 	ignore = dirty
 [submodule "bundle/vim-unimpaired"]
-	path = bundle/vim-unimpaired
+	path = pack/bundle/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
 	ignore = dirty
 [submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
+	path = pack/bundle/start/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
 	ignore = dirty
 [submodule "bundle/CycleColor"]
-	path = bundle/CycleColor
+	path = pack/bundle/opt/CycleColor
 	url = https://github.com/vim-scripts/CycleColor.git
 	ignore = dirty
 [submodule "bundle/syntaxhaskell.vim"]
-	path = bundle/syntaxhaskell.vim
+	path = pack/bundle/start/syntaxhaskell.vim
 	url = https://github.com/vim-scripts/syntaxhaskell.vim.git
 	ignore = dirty
 [submodule "bundle/vim-HiLinkTrace"]
-	path = bundle/vim-HiLinkTrace
+	path = pack/bundle/opt/vim-HiLinkTrace
 	url = https://github.com/gerw/vim-HiLinkTrace.git
 	ignore = dirty
 [submodule "bundle/hexHighlight"]
-	path = bundle/hexHighlight
+	path = pack/bundle/opt/hexHighlight
 	url = https://github.com/yurifury/hexHighlight.git
 	ignore = dirty
 [submodule "bundle/vim-toml"]
-	path = bundle/vim-toml
+	path = pack/bundle/opt/vim-toml
 	url = https://github.com/cespare/vim-toml.git
 	ignore = dirty
 [submodule "bundle/vim-characterize"]
-	path = bundle/vim-characterize
+	path = pack/bundle/opt/vim-characterize
 	url = https://github.com/tpope/vim-characterize.git
 	ignore = dirty

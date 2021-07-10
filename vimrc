@@ -1,8 +1,3 @@
-" Do this first (or before filetype on stuff)
-execute pathogen#infect()
-
-
-" Do this AFTER loading pathogen
 filetype plugin indent on
 
 

@@ -5,16 +5,14 @@ README
 
 
 
-Install
--------
+== Install
 
 To install:
 1) drop this repo into a `~/.vim`.
 2) create softlinks from `~/.vimrc` to `~/.vim/vimrc` and `~/.gvimrc` to `~/.vim/gvimrc`
 
 
-License
--------
+== License
 
 Not sure what licenses would be applicable to configuration files, so I'm
 simply releasing my configurations as "Free". I.e.: public domain.
@@ -29,8 +27,7 @@ Contact me if you really need a more specific answer.
 
 
 
-Branches
---------
+== Branches
 
 Given that I use vim both at work and at home, and that my needs in the two
 environments are slightly different, there are two branches publicly available
